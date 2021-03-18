@@ -1,17 +1,16 @@
 import React from 'react';
 import {View, StyleSheet, FlatList, ScrollView} from 'react-native';
 import { Container, Header, Left, Body, Right, Button, Icon, Title, Card, CardItem, Text } from 'native-base';
-import {useTheme} from '@react-navigation/native';
 import {primary, textcolor, textLight} from '../constants';
 import {Ionicons} from '@expo/vector-icons';
 
-const HomeScreen= props =>{
+const AllJobScreen= props =>{
 
 
     return <View style ={{flex:1}}>
         <Header style={{backgroundColor:primary}}>
           <Body>
-            <Title style={{color:textcolor}}>Today's Job</Title>
+            <Title style={{color:textcolor}}>All Jobs</Title>
           </Body>
           <Right>
             <Button transparent>
@@ -56,4 +55,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default HomeScreen;
+export default AllJobScreen;
