@@ -8,8 +8,7 @@ import ProfileScreen from '../screen/ProfileScreen';
 import AllJobScreen from '../screen/AllJobScreen';
 import AppliedJobScreen from '../screen/AppliedJobScreen';
 import {Ionicons} from '@expo/vector-icons'; 
-import {View} from 'react-native';
-import { Container, Header, Content, Footer, FooterTab, Button, Icon } from 'native-base';
+
 
 
 
@@ -65,10 +64,10 @@ const OfferTabNavigator = () => {
                 tabBarIcon:(props) => <Ionicons name="home" color={props.focused ?'#1e2226' : '#99adc1'} size={props.focused ? props.size*1.3 : props.size}/>
             }} />
             <offTab.Screen name="Applied" component = {AppliedJobScreen} options={{
-                tabBarIcon:(props) => <Ionicons name="home" color={props.focused ?'#1e2226' : '#99adc1'} size={props.focused ? props.size*1.3 : props.size}/>
+                tabBarIcon:(props) => <Ionicons name="briefcase" color={props.focused ?'#1e2226' : '#99adc1'} size={props.focused ? props.size*1.3 : props.size}/>
             }} />
             <offTab.Screen name="Profile" component = {ProfileScreen} options={{
-                tabBarIcon:(props) => <Ionicons name="home" color={props.focused ?'#1e2226' : '#99adc1'} size={props.focused ? props.size*1.3 : props.size}/>
+                tabBarIcon:(props) => <Ionicons name="md-man" color={props.focused ?'#1e2226' : '#99adc1'} size={props.focused ? props.size*1.3 : props.size}/>
             }} />
 
         </offTab.Navigator>

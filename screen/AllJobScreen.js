@@ -1,28 +1,21 @@
 import React from 'react';
 import {View, StyleSheet, FlatList, ScrollView} from 'react-native';
-import { Container, Header, Left, Body, Right, Button, Icon, Title, Card, CardItem, Text } from 'native-base';
+import { Appbar } from 'react-native-paper';
 import {primary, textcolor, textLight} from '../constants';
 import {Ionicons} from '@expo/vector-icons';
 
 const AllJobScreen= props =>{
 
 
-    return <View style ={{flex:1}}>
-        <Header style={{backgroundColor:primary}}>
-          <Body>
-            <Title style={{color:textcolor}}>All Jobs</Title>
-          </Body>
-          <Right>
-            <Button transparent>
-              <Icon name='search' style={{color:textcolor}}/>
-            </Button>            
-            <Button transparent>
-              <Icon name='md-man' style={{color:textcolor}} />
-            </Button>
-          </Right>
-        </Header>
+    return (
+    <View style ={{flex:1}}>
+        <Appbar.Header style={{backgroundColor:primary}}>            
+            <Appbar.Content title="All Jobs" style={{color:textcolor}} />
+            <Appbar.Action icon="magnify" onPress={() => {null}} style={{color:textcolor}} />
+            <Appbar.Action icon="md-add-circle-outline" onPress={() => {null}} style={{color:textcolor}} />
+        </Appbar.Header>
 
-        <ScrollView>
+      <ScrollView>
         <Card>
             <CardItem header>
               <Text style={{color:textLight, fontSize:20}}>NativeBase</Text>
@@ -41,13 +34,10 @@ const AllJobScreen= props =>{
               </View>
             </CardItem>
          </Card>
-
-         
-
-         
         </ScrollView>
 
     </View>
+    )
 
 }
  

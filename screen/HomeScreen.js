@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, FlatList, ScrollView} from 'react-native';
-import { Container, Header, Left, Body, Right, Button, Icon, Title, Card, CardItem, Text } from 'native-base';
+import { Appbar } from 'react-native-paper';
 import {useTheme} from '@react-navigation/native';
 import {primary, textcolor, textLight} from '../constants';
 import {Ionicons} from '@expo/vector-icons';
@@ -8,22 +8,16 @@ import {Ionicons} from '@expo/vector-icons';
 const HomeScreen= props =>{
 
 
-    return <View style ={{flex:1}}>
-        <Header style={{backgroundColor:primary}}>
-          <Body>
-            <Title style={{color:textcolor}}>Today's Job</Title>
-          </Body>
-          <Right>
-            <Button transparent>
-              <Icon name='search' style={{color:textcolor}}/>
-            </Button>            
-            <Button transparent>
-              <Icon name='md-man' style={{color:textcolor}} />
-            </Button>
-          </Right>
-        </Header>
+    return (
+    <View style ={{flex:1}}>
 
-        <ScrollView>
+      <Appbar.Header style={{backgroundColor:primary}}>                  
+        <Appbar.Content title="Today's Jobs" style={{color:textcolor}} />
+        <Appbar.Action icon="magnify" onPress={() => {null}} style={{color:textcolor}} />
+        <Appbar.Action icon="md-man" onPress={() => {null}} style={{color:textcolor}} />
+      </Appbar.Header>
+
+      <ScrollView>
         <Card>
             <CardItem header>
               <Text style={{color:textLight, fontSize:20}}>NativeBase</Text>
@@ -42,13 +36,10 @@ const HomeScreen= props =>{
               </View>
             </CardItem>
          </Card>
-
-         
-
-         
-        </ScrollView>
+      </ScrollView>
 
     </View>
+    )
 
 }
  
